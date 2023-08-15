@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const {destinationSchema} = require('./Destination')
+const destinationSchema = require('./Destination')
 const flightsSchema = mongoose.Schema({
     airline: {
         type: String,
@@ -19,7 +19,8 @@ const flightsSchema = mongoose.Schema({
         enum: ['AUS','DAL','LAX','SAN','SEA']
     },
 
-    destinations: {type: [destinationSchema]}
+
+    destinations: [destinationSchema] 
     
 
 });

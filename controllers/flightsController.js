@@ -21,8 +21,17 @@ module.exports.create = async (req,res) => {
 }
 
 module.exports.show = async (req,res) =>{
-    console.log(req.params)
+ 
     const foundFlight = await Flight.findById(req.params.id)
+
+    res.render('Show', {Flight: foundFlight})
+}
+
+module.exports.update = async (req,res) => {
+    console.log(req.body)
+    const foundFlight = await Flight.findById(req.params.id)
+    foundFlight.destinations.push(req.body)
+    foundFlight.save()
     console.log(foundFlight)
     res.render('Show', {Flight: foundFlight})
 }

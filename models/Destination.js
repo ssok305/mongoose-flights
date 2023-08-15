@@ -11,6 +11,6 @@ const destinationSchema = mongoose.Schema ({
 
 })
 
-const Destination = mongoose.model('Destination', destinationSchema)
+// const Destination = mongoose('Destination', destinationSchema)
 
-module.exports = Destination;
+module.exports = destinationSchema;

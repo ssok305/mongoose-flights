@@ -12,8 +12,8 @@ router.get('/new', flightsController.new)
 // // "destroy" route
 // router.delete('/:indexOfFlights', flightsController.destroy)
 
-// // "update" route
-// router.put('/:indexOfFlights', flightsController.update)
+// "update" route
+router.put('/:id', flightsController.update)
 
 // "create" route
 router.post('/', flightsController.create)
