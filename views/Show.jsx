@@ -5,21 +5,27 @@ const Show = ({ Flight }) => {
   return (
     <div>
       <br />
-      {airline}
+      <p>Airline: {airline}</p>
       <br />
-      {flightNo}
+      <p>Flight Number: {flightNo}</p>
       <br />
-      {departs.toLocaleDateString() + " "}
-      {departs.toLocaleTimeString()}
+      <p>
+        Departure Time:
+        {departs.toLocaleDateString() + " "}
+        {departs.toLocaleTimeString()}
+      </p>
       <br />
       {destinations
         ? destinations.map((destination) => {
             return (
               <>
+                <p>Arrival Airport: </p>
                 <p>{destination.arrivalAirport}</p>
                 <br />
+                <p>Arrival Time: </p>
                 <p>{destination.arrival.toLocaleDateString() + " "}</p>
                 <p>{destination.arrival.toLocaleTimeString()}</p>
+                <hr />
               </>
             );
           })
