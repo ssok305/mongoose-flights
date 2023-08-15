@@ -10,7 +10,6 @@ module.exports.new = (req, res) => {
 }
 
 module.exports.create = async (req,res) => {
-    console.log(req.body)
     try{
         let flight = await Flight.create(req.body)
         console.log(flight)
@@ -23,8 +22,9 @@ module.exports.create = async (req,res) => {
 module.exports.show = async (req,res) =>{
  
     const foundFlight = await Flight.findById(req.params.id)
-
+    foundFlight.destinations.sort((a,b) => a.arrival - b.arrival)
     res.render('Show', {Flight: foundFlight})
+
 }
 
 module.exports.update = async (req,res) => {

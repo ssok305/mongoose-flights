@@ -2,11 +2,12 @@ import React from "react";
 
 const Show = ({ Flight }) => {
   let { airline, flightNo, departs, destinations } = Flight;
+  console.log(destinations.arrivalAirport);
   return (
     <div>
       <br />
       <p>Airline: {airline}</p>
-      <br />
+
       <p>Flight Number: {flightNo}</p>
       <br />
       <p>
