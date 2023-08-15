@@ -15,8 +15,11 @@ const Index = ({flights}) => {
                         {flight.departs.toLocaleDateString() + ' '}
                         
                         {flight.departs.toLocaleTimeString()}
+                        <a href={`http://localhost:8080/flights/${flight._id}`}>
+                            <button>Detail</button>
+                        </a>
                     </p>
-             
+
             )}
         </div>
     )

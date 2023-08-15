@@ -19,3 +19,10 @@ module.exports.create = async (req,res) => {
     }
     res.redirect('flights')
 }
+
+module.exports.show = async (req,res) =>{
+    console.log(req.params)
+    const foundFlight = await Flight.findById(req.params.id)
+    console.log(foundFlight)
+    res.render('Show', {Flight: foundFlight})
+}

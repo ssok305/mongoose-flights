@@ -21,7 +21,7 @@ router.post('/', flightsController.create)
 // // "edit" route
 // router.get('/:indexOfFlights/edit', flightsController.edit)
 
-// // "show" route      //   localhost:8080/flights/:indexOfFlights
-// router.get('/:id', flightsController.show)
+// "show" route      //   localhost:8080/flights/:indexOfFlights
+router.get('/:id', flightsController.show)
 
 module.exports = router

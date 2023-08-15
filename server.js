@@ -9,6 +9,8 @@ const app = express()
 const PORT = 8080;
 
 const jsxEngine = require('jsx-view-engine')
+const methodOverride = require('method-override')
+app.use(methodOverride('_method'))
 
 
 // Configure the view engine and look for files ending in jsx
